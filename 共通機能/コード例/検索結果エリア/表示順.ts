@@ -97,3 +97,12 @@ const sortOnChange_TblGakuseki = (sort: { prop: string; order: string | null }) 
 };
 
 // @sort-change="sortOnChange_TblGakuseki"の形式でel-tableのsort-changeイベントを定義する
+                        <div class="tablecontentarea">
+                            <div class="orderbox">
+                                <AlLabel :itemName="t('Tool.Tool.dispOrder')" />
+                                <AlComboBox
+                                    v-model="dispOrderComboBox"
+                                    :items="dispOrderComboBoxItems()"
+                                    @change="OnChangedispOrderComboBox" />
+                            </div>
+                        </div>
