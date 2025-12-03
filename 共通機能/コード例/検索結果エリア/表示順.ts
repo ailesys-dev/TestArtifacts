@@ -30,6 +30,7 @@ const OnChangedispOrderComboBox = () => {
     /*
     選択された項目で一覧表を並べ替える。
     fieldにはフロント側のプロパティ名を設定すること。
+    名称系はカナ用を使用しないと五十音順にならない。
     */
     switch (dispOrderComboBox.value) {
         case '0': // 状態 (+学籍番号)  
