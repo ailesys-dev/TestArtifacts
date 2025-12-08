@@ -13,9 +13,9 @@ const OnClickCancelButton = () => {
 };
 
 // 配置例
-        <section id="content02">
-            <div class="aladdbutton">
-                <AlFileOutputButton @click="OnClickFileOutputButton" />
-                <AlCancelButton @click="OnClickCancelButton" />
-            </div>
-        </section>
+<section id="content02">
+    <div class="aladdbutton">
+        <AlFileOutputButton @click="OnClickFileOutputButton" />
+        <AlCancelButton @click="OnClickCancelButton" />
+    </div>
+</section>
