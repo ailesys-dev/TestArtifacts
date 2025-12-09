@@ -1,5 +1,9 @@
 /** 中止ボタンのOnClickイベント */
 const OnClickCancelButton = () => {
+    // 中止ボタンのメッセージ、メッセージ内容はi18nで定義する。
+    if (await alConfirmDialogRef.value!.showConfirmYesNo(t('message.cancel')) === 'reject') {
+        return;
+    }
     // 表示順コンボボックスの選択状態を初期化する。
     dispOrderComboBox.value = "0";
     // 検索結果エリアの一覧データをクリアする。
@@ -19,3 +23,13 @@ const OnClickCancelButton = () => {
         <AlCancelButton @click="OnClickCancelButton" />
     </div>
 </section>
+
+// 中止ボタンのメッセージ
+<i18n lang="json">
+{
+    "ja": { 
+    "message": {
+        "cancel": "中止してもよろしいですか？\n入力した内容は保存されません。"
+    }
+    }
+};
