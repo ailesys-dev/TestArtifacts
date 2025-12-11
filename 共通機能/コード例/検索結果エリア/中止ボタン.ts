@@ -1,5 +1,5 @@
 /** 中止ボタンのOnClickイベント */
-const OnClickCancelButton = () => {
+const OnClickCancelButton = async () => {
     // 中止ボタンのメッセージ、メッセージ内容はi18nで定義する。
     if (await alConfirmDialogRef.value!.showConfirmYesNo(t('message.cancel')) === 'reject') {
         return;
